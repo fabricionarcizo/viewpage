@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ViewPage</string>
+    <string name="fragment_text">Slide the Fragment</string>
+</resources>
