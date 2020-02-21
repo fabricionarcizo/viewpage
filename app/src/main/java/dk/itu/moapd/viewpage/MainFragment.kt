@@ -18,11 +18,7 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+        val view = inflater.inflate(R.layout.fragment_main, container, false)
 
         mColor = if (savedInstanceState == null) {
             val random = Random()
@@ -32,6 +28,11 @@ class MainFragment : Fragment() {
         } else
             savedInstanceState.getInt("COLOR")
 
+        return view
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         scroll_view.setBackgroundColor(mColor!!)
     }
 
